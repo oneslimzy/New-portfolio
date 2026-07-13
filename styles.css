@@ -16,3 +16,20 @@
     rgba(0, 0, 0, 0.04)
   );
 }
+.brand-art.has-brand-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brand-art.has-brand-image::before,
+.brand-art.has-brand-image::after {
+  display: none;
+}
+
+.brand-art.has-brand-image span {
+  background: rgba(17, 18, 20, 0.76);
+  color: #fff;
+  padding: 0.35rem 0.45rem;
+  border-radius: 3px;
+}
