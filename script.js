@@ -37,12 +37,12 @@ const motionProjects = [
 
 const brandProjects = [
   {
-    title: 'Project One',
-    type: 'Identity / Art direction',
+    title: 'Aestus Relay',
+    type: 'Brand Identity / direction',
     color: '#cf4427',
     ink: '#1b1a19',
     mark: 'O',
-    imageUrl: 'images/project-one.webp'
+    imageUrl: 'image/Artboard 25.jpg'
   },
   {
     title: 'Project Two',
