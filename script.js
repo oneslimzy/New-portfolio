@@ -50,7 +50,7 @@ const brandProjects = [
     color: '#123f34',
     ink: '#e9e5dc',
     mark: '2',
-    imageUrl: 'images/project-two.webp'
+    imageUrl: 'image/Ziba Menu Mockup.png'
   },
   {
     title: 'Bofal Business Hub',
@@ -58,31 +58,31 @@ const brandProjects = [
     color: '#e7ca24',
     ink: '#151614',
     mark: 'S',
-    imageUrl: 'image/Bofal Mixed Colored.png'
+    imageUrl: 'image/Bofal Colored.png'
   },
   {
-    title: 'Project Four',
-    type: 'Visual identity',
+    title: 'Hevm',
+    type: 'Brand identity',
     color: '#7e63c9',
     ink: '#ffffff',
     mark: '4',
-    imageUrl: ''
+    imageUrl: 'image/Hevm.jpg'
   },
   {
-    title: 'Project Five',
-    type: 'Editorial design',
+    title: 'Paiflo Fintech',
+    type: 'Brand Identity',
     color: '#e9e5dc',
     ink: '#151614',
     mark: 'V',
-    imageUrl: ''
+    imageUrl: 'image/manique tshirt'
   },
   {
-    title: 'Project Six',
+    title: 'Defiscan',
     type: 'Art direction',
     color: '#f05b36',
     ink: '#151614',
     mark: '6',
-    imageUrl: ''
+    imageUrl: 'image/Defiscan.jpg'
   }
 ];
 
