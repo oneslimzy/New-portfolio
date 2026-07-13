@@ -74,7 +74,7 @@ const brandProjects = [
     color: '#e9e5dc',
     ink: '#151614',
     mark: 'V',
-    imageUrl: 'image/manique tshirt'
+    imageUrl: 'image/manique tshirt.png'
   },
   {
     title: 'Defiscan',
