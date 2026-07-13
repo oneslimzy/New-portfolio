@@ -36,12 +36,54 @@ const motionProjects = [
 ];
 
 const brandProjects = [
-  { title: 'Project One', type: 'Identity / Art direction', color: '#cf4427', ink: '#1b1a19', mark: 'O' },
-  { title: 'Project Two', type: 'Packaging / Identity', color: '#123f34', ink: '#e9e5dc', mark: '2' },
-  { title: 'Project Three', type: 'Campaign / Digital', color: '#e7ca24', ink: '#151614', mark: 'S' },
-  { title: 'Project Four', type: 'Visual identity', color: '#7e63c9', ink: '#ffffff', mark: '4' },
-  { title: 'Project Five', type: 'Editorial design', color: '#e9e5dc', ink: '#151614', mark: 'V' },
-  { title: 'Project Six', type: 'Art direction', color: '#f05b36', ink: '#151614', mark: '6' }
+  {
+    title: 'Project One',
+    type: 'Identity / Art direction',
+    color: '#cf4427',
+    ink: '#1b1a19',
+    mark: 'O',
+    imageUrl: 'images/project-one.webp'
+  },
+  {
+    title: 'Project Two',
+    type: 'Packaging / Identity',
+    color: '#123f34',
+    ink: '#e9e5dc',
+    mark: '2',
+    imageUrl: 'images/project-two.webp'
+  },
+  {
+    title: 'Project Three',
+    type: 'Campaign / Digital',
+    color: '#e7ca24',
+    ink: '#151614',
+    mark: 'S',
+    imageUrl: 'images/project-three.webp'
+  },
+  {
+    title: 'Project Four',
+    type: 'Visual identity',
+    color: '#7e63c9',
+    ink: '#ffffff',
+    mark: '4',
+    imageUrl: ''
+  },
+  {
+    title: 'Project Five',
+    type: 'Editorial design',
+    color: '#e9e5dc',
+    ink: '#151614',
+    mark: 'V',
+    imageUrl: ''
+  },
+  {
+    title: 'Project Six',
+    type: 'Art direction',
+    color: '#f05b36',
+    ink: '#151614',
+    mark: '6',
+    imageUrl: ''
+  }
 ];
 
 document.documentElement.classList.add('js');
@@ -95,6 +137,11 @@ brandProjects.forEach((project) => {
   art.style.setProperty('--brand-color', project.color);
   art.style.setProperty('--brand-ink', project.ink);
   art.dataset.mark = project.mark;
+
+  if (project.imageUrl) {
+    art.style.backgroundImage = `url("${project.imageUrl}")`;
+    art.classList.add('has-brand-image');
+  }
 
   art.querySelector('span').textContent = project.type;
   card.querySelector('h3').textContent = project.title;
