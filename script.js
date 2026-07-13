@@ -7,22 +7,22 @@
 const motionProjects = [
   {
     number: '01',
-    title: 'Launch Film',
-    type: 'Product launch / 2025',
+    title: 'Zidi AI Assitant',
+    type: 'Explainer Video / 2026',
     color: '#e94924',
-    embedUrl: ''
+    embedUrl: 'https://www.youtube.com/embed/lbR9eU14EFk?autoplay=1'
   },
   {
     number: '02',
     title: 'Promo Energy',
-    type: 'Promotional video / 2025',
+    type: 'Promotional video / 2026',
     color: '#3577db',
     embedUrl: ''
   },
   {
     number: '03',
     title: 'Social Motion',
-    type: 'Campaign content / 2025',
+    type: 'Launch Video / 2026',
     color: '#ebbf28',
     embedUrl: ''
   },
