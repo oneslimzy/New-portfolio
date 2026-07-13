@@ -45,20 +45,20 @@ const brandProjects = [
     imageUrl: 'image/Artboard 25.jpg'
   },
   {
-    title: 'Project Two',
-    type: 'Packaging / Identity',
+    title: 'Ziba Cafe',
+    type: 'Logo Identity / Packaging',
     color: '#123f34',
     ink: '#e9e5dc',
     mark: '2',
     imageUrl: 'images/project-two.webp'
   },
   {
-    title: 'Project Three',
-    type: 'Campaign / Digital',
+    title: 'Bofal Business Hub',
+    type: 'Logo Identity',
     color: '#e7ca24',
     ink: '#151614',
     mark: 'S',
-    imageUrl: 'images/project-three.webp'
+    imageUrl: 'image/Bofal Mixed Colored.png'
   },
   {
     title: 'Project Four',
