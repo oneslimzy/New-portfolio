@@ -52,67 +52,33 @@
   margin-bottom: 1.2rem;
 }
 
-.what-i-do-box {
+.what-i-do-box,
+.tools-box {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
 }
 
-.what-i-do-box span {
-  border: 1px solid #c9ff43;
+.what-i-do-box span,
+.tools-box span {
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   padding: 0.7rem 0.85rem;
-  background: #c9ff43;
-  color: #111214;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.tools-marquee {
-  overflow: hidden;
-  width: 100%;
-  padding: 0.15rem 0;
-}
-
-.tools-track {
-  display: flex;
-  width: max-content;
-  animation: tools-scroll 20s linear infinite;
-}
-
-.tools-group {
-  display: flex;
-  flex: 0 0 auto;
-  gap: 0.65rem;
-  padding-right: 0.65rem;
-}
-
-.tools-group span {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-  padding: 0.7rem 0.85rem;
-  background: #191a1d;
   color: #f1f1ee;
   font-size: 0.82rem;
-  white-space: nowrap;
   line-height: 1;
 }
 
-.tools-marquee:hover .tools-track {
-  animation-play-state: paused;
+.what-i-do-box span {
+  background: #c9ff43;
+  border-color: #c9ff43;
+  color: #111214;
+  font-weight: 700;
 }
 
-@keyframes tools-scroll {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tools-track {
-    animation: none;
-  }
+.tools-box span {
+  background: #191a1d;
+  color: #d9d9d9;
 }
 
 @media (max-width: 700px) {
