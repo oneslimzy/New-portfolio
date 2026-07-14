@@ -213,25 +213,38 @@ document.querySelectorAll('.site-nav a').forEach((link) => {
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-document.querySelector('#project-form').addEventListener('submit', (event) => {
+document.querySelector('#project-form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const data = new FormData(event.currentTarget);
+  const form = event.currentTarget;
+  const button = form.querySelector('.send-button');
 
-  const subject = encodeURIComponent(
-    `${data.get('type')} project enquiry from ${data.get('name')}`
-  );
+  // Paste your Formspree endpoint between the quotation marks below.
+  const formspreeEndpoint = 'https://formspree.io/f/mykrzzja';
 
-  const body = encodeURIComponent(
-    `Name: ${data.get('name')}
-Email: ${data.get('email')}
-Project type: ${data.get('type')}
-Timeline: ${data.get('timeline')}
+  button.disabled = true;
+  button.textContent = 'Sending...';
 
-Project details:
-${data.get('details')}`
-  );
+  try {
+    const response = await fetch(formspreeEndpoint, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        Accept: 'application/json'
+      }
+    });
 
-  window.location.href =
-    `mailto:slimzyconcept@gmail.com?subject=${subject}&body=${body}`;
+    if (response.ok) {
+      form.reset();
+      button.textContent = 'Enquiry sent ✓';
+    } else {
+      button.textContent = 'Try again';
+      alert('Your enquiry could not be sent. Please try again.');
+    }
+  } catch (error) {
+    button.textContent = 'Try again';
+    alert('Connection error. Please try again.');
+  }
+
+  button.disabled = false;
 });
