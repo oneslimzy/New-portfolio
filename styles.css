@@ -33,3 +33,57 @@
   padding: 0.35rem 0.45rem;
   border-radius: 3px;
 }
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 5rem;
+}
+
+.expertise-block {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  padding: 1.4rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.expertise-block .eyebrow {
+  margin-bottom: 1.2rem;
+}
+
+.what-i-do-box,
+.tools-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.what-i-do-box span,
+.tools-box span {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 0.7rem 0.85rem;
+  color: #f1f1ee;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.what-i-do-box span {
+  background: #c9ff43;
+  border-color: #c9ff43;
+  color: #111214;
+  font-weight: 700;
+}
+
+.tools-box span {
+  background: #191a1d;
+  color: #d9d9d9;
+}
+
+@media (max-width: 700px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    margin-top: 3.5rem;
+  }
+}
