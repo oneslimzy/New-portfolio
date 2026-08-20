@@ -7,15 +7,17 @@
 const motionProjects = [
   {
     number: '01',
-    title: 'Zidi AI Assitant',
+    title: 'Zidi AI Assistant',
     type: 'Explainer Video / 2026',
+    description: 'A clear, engaging explainer that introduces Zidi AI and makes its product story easy to understand.',
     color: '#e94924',
     embedUrl: 'https://www.youtube.com/embed/lbR9eU14EFk?autoplay=1'
   },
   {
     number: '02',
     title: 'Promo Energy',
-    type: 'Promotional video / 2026',
+    type: 'Promotional Video / 2026',
+    description: 'A fast-paced promotional edit designed to hold attention and build excitement.',
     color: '#3577db',
     embedUrl: ''
   },
@@ -23,13 +25,15 @@ const motionProjects = [
     number: '03',
     title: 'Social Motion',
     type: 'Launch Video / 2026',
+    description: 'A sharp launch video combining bold visuals, motion and product-focused storytelling.',
     color: '#ebbf28',
     embedUrl: ''
   },
   {
     number: '04',
     title: 'Brand in Motion',
-    type: 'Motion system / 2025',
+    type: 'Motion System / 2025',
+    description: 'A flexible motion system built to give a brand a consistent visual rhythm.',
     color: '#9e8be5',
     embedUrl: ''
   }
@@ -145,7 +149,8 @@ brandProjects.forEach((project) => {
 
   art.querySelector('span').textContent = project.type;
   card.querySelector('h3').textContent = project.title;
-  card.querySelector('p').textContent = project.type;
+card.querySelector('.work-type').textContent = project.type;
+card.querySelector('.work-description').textContent = project.description;
 
   brandGrid.appendChild(card);
 });
