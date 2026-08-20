@@ -15,11 +15,11 @@ const motionProjects = [
   },
   {
     number: '02',
-    title: 'Promo Energy',
+    title: 'Axentra Demo Video',
     type: 'Promotional Video / 2026',
     description: 'A fast-paced promotional edit designed to hold attention and build excitement.',
     color: '#3577db',
-    embedUrl: ''
+    embedUrl: 'https://www.youtube.com/embed/RenxlrL38O4?autoplay=1'
   },
   {
     number: '03',
