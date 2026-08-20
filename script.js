@@ -123,7 +123,8 @@ motionProjects.forEach((project) => {
 
   card.querySelector('.work-index').textContent = project.number;
   card.querySelector('h3').textContent = project.title;
-  card.querySelector('p').textContent = project.type;
+card.querySelector('.work-type').textContent = project.type;
+card.querySelector('.work-description').textContent = project.description;
   card.querySelector('.work-details span').textContent =
     project.embedUrl ? 'Watch →' : 'Add link';
 
@@ -149,8 +150,7 @@ brandProjects.forEach((project) => {
 
   art.querySelector('span').textContent = project.type;
   card.querySelector('h3').textContent = project.title;
-card.querySelector('.work-type').textContent = project.type;
-card.querySelector('.work-description').textContent = project.description;
+card.querySelector('p').textContent = project.type;
 
   brandGrid.appendChild(card);
 });
