@@ -9,34 +9,26 @@ const motionProjects = [
     number: '01',
     title: 'Zidi AI Assistant',
     type: 'Explainer Video / 2026',
-    description: 'A clear, engaging explainer that introduces Zidi AI and makes its product story easy to understand.',
+    description: 'A clear, engaging explainer that introduces Zidi, the WhatsApp AI assistant, and makes its features and value easy to understand.',
     color: '#e94924',
     embedUrl: 'https://www.youtube.com/embed/lbR9eU14EFk?autoplay=1'
   },
   {
     number: '02',
-    title: 'Axentra Demo Video',
+    title: 'Axentra',
     type: 'Promotional Video / 2026',
-    description: 'A fast-paced promotional edit designed to hold attention and build excitement.',
+    description: 'A fast-paced promotional video made for Axentra to hold attention and build excitement.',
     color: '#3577db',
     embedUrl: 'https://www.youtube.com/embed/RenxlrL38O4?autoplay=1'
   },
   {
     number: '03',
-    title: 'Social Motion',
-    type: 'Launch Video / 2026',
-    description: 'A sharp launch video combining bold visuals, motion and product-focused storytelling.',
+    title: 'SAG USSD',
+    type: 'Explainer Video / 2026',
+    description: 'A short walkthrough showing how users can access SubandGain services through USSD, making the process simple and easy to follow.',
     color: '#ebbf28',
-    embedUrl: ''
+    embedUrl: 'https://www.youtube.com/embed/RTezj-j7w7o?autoplay=1'
   },
-  {
-    number: '04',
-    title: 'Brand in Motion',
-    type: 'Motion System / 2025',
-    description: 'A flexible motion system built to give a brand a consistent visual rhythm.',
-    color: '#9e8be5',
-    embedUrl: ''
-  }
 ];
 
 const brandProjects = [
