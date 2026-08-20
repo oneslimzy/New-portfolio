@@ -140,25 +140,3 @@
     font-size: 1.15rem;
   }
 
-  .work-details p {
-    margin-top: 0.55rem;
-    font-size: 0.9rem;
-    line-height: 1.55;
-  }
-}
-.work-details .work-type {
-  color: var(--acid);
-  font: 600 0.68rem var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 0.45rem;
-}
-
-.work-details .work-description {
-  max-width: 750px;
-  margin: 0.55rem 0 0;
-  color: #aeb0b0;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  text-transform: none;
-}
