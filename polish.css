@@ -1,0 +1,32 @@
+/* Final dark About treatment with Accolade-style typography. */
+.about{background:var(--ink);color:var(--paper)}
+.about .eyebrow{color:var(--acid)}
+.services-title h2,.slimzy-about-copy h2{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:-.07em;line-height:.9}
+.services-title h2 em,.slimzy-about-copy h2 em{color:var(--acid)}
+.services-list,.slimzy-about-layout,.about-details{border-color:var(--line)}
+.service-row{border-color:var(--line)}
+.service-row>span{color:var(--muted)}
+.service-row h3{color:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-.04em}
+.service-row p{color:rgba(255,255,255,.68);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.78rem;line-height:1.55}
+.about-lede{color:#c2c4c0}
+.detail-label{color:var(--acid)!important}
+.about-details li{border-color:rgba(255,255,255,.12)}
+.about-details li span,.about-details>div>p:not(.detail-label){color:var(--muted)}
+.about-actions .text-link{margin:0;padding:0 0 .45rem;border-bottom:1px solid var(--acid);border-radius:0;background:transparent;color:var(--acid);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.82rem;font-weight:700}
+.project-meta .project-description{max-width:38rem;margin-top:.6rem;color:#c3c5c0;font-size:.82rem;line-height:1.5;text-transform:none}
+.slimzy-portrait{background:#e9e9e7 url("images/ayomide-portrait.png") center top/cover no-repeat}
+.slimzy-portrait:before{display:none}
+.slimzy-portrait span{padding:.38rem .5rem;background:rgba(17,18,20,.76)}
+
+.site-nav a{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.73rem;letter-spacing:-.01em}
+.approach{padding-top:7rem;padding-bottom:7rem;background:#151617;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.approach-heading{display:grid;grid-template-columns:.9fr 1.55fr .85fr;gap:2rem;align-items:start;padding-bottom:4rem}
+.approach-heading h2{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:clamp(2.85rem,5.7vw,6.25rem);font-weight:700;letter-spacing:-.075em;line-height:.9}
+.approach-heading p:last-child{margin:.7rem 0 0;color:var(--muted);font-size:.92rem;line-height:1.58}
+.approach-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.approach-list article{min-height:230px;padding:1.4rem 1.45rem 1.5rem;border-right:1px solid var(--line)}
+.approach-list article:first-child{padding-left:0}.approach-list article:last-child{border-right:0}
+.approach-list span{color:var(--acid);font:500 .63rem var(--mono);letter-spacing:.06em}
+.approach-list h3{margin:3.5rem 0 .8rem;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:-.05em}
+.approach-list p{max-width:275px;margin:0;color:var(--muted);font-size:.82rem;line-height:1.55}
+@media(max-width:700px){.site-nav a{font-size:.78rem}.approach{padding-top:5rem;padding-bottom:5rem}.approach-heading{display:block;padding-bottom:2.8rem}.approach-heading h2{margin:1.3rem 0}.approach-heading p:last-child{max-width:390px;margin-top:0}.approach-list{display:block}.approach-list article,.approach-list article:first-child{min-height:0;padding:1.25rem 0;border-right:0;border-bottom:1px solid var(--line)}.approach-list article:last-child{border-bottom:0}.approach-list h3{margin:2.3rem 0 .65rem}}

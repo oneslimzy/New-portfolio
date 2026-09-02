@@ -1,222 +1,111 @@
-// EDIT HERE: replace each embedUrl with your YouTube, Vimeo or Drive embed URL.
-// Example YouTube: https://www.youtube.com/embed/VIDEO_ID?autoplay=1
-// Example Vimeo: https://player.vimeo.com/video/VIDEO_ID?autoplay=1
-// YouTube covers are selected automatically. For Vimeo or a self-hosted video,
-// add thumbnailUrl: 'images/your-cover.webp' to that project.
-
+// EDIT HERE: Upload an MP4 video and its cover image to your GitHub project,
+// then use paths like 'videos/launch-film.mp4' and 'images/launch-cover.jpg'.
+// This uses the browser's built-in video player, so visitors play the film on
+// your website without going to YouTube.
 const motionProjects = [
-  {
-    number: '01',
-    title: 'Zidi AI Assistant',
-    type: 'Explainer Video / 2026',
-    description: 'A clear, engaging explainer that introduces Zidi, the WhatsApp AI assistant, and makes its features and value easy to understand.',
-    color: '#e94924',
-    embedUrl: 'https://www.youtube.com/embed/lbR9eU14EFk?autoplay=1'
-  },
-  {
-    number: '02',
-    title: 'Axentra',
-    type: 'Promotional Video / 2026',
-    description: 'A fast-paced promotional video made for Axentra to hold attention and build excitement.',
-    color: '#3577db',
-    embedUrl: 'https://www.youtube.com/embed/RenxlrL38O4?autoplay=1'
-  },
-  {
-    number: '03',
-    title: 'SAG USSD',
-    type: 'Explainer Video / 2026',
-    description: 'A short walkthrough showing how users can access SubandGain services through USSD, making the process simple and easy to follow.',
-    color: '#ebbf28',
-    embedUrl: 'https://www.youtube.com/embed/RTezj-j7w7o?autoplay=1'
-  },
+  { number: '01', title: 'Zidi AI Assistant', type: 'Explainer video', description: 'A clear, engaging product story that makes the Zidi AI experience easy to understand.', year: '2026', color: '#5f78d4', category: 'motion', videoUrl: 'videos/zidi-ai-assistant.mp4', posterUrl: '' },
+  { number: '02', title: 'Axentra', type: 'Product promo video', description: 'A cinematic product promo that brings the Axentra trading platform to life through dynamic interface motion and focused visual pacing.', year: '2026', color: '#cc6de4', category: 'motion', videoUrl: 'videos/axentra.mp4', posterUrl: '' },
+  { number: '03', title: 'SAG USSD', type: 'Product walkthrough', description: 'A guided feature video showing users how to access and use the SAG USSD service with ease.', year: '2026', color: '#e4b93d', category: 'motion', videoUrl: 'videos/sag-ussd.mp4', posterUrl: '' }
 ];
 
+// Featured branding work. Each card uses its real Behance cover image and
+// opens the matching project page, not just your Behance profile.
 const brandProjects = [
-  {
-    title: 'Aestus Relay',
-    type: 'Brand Identity / direction',
-    color: '#cf4427',
-    ink: '#1b1a19',
-    mark: 'O',
-    imageUrl: 'image/Artboard 25.jpg'
-  },
-  {
-    title: 'Ziba Cafe',
-    type: 'Logo Identity / Packaging',
-    color: '#123f34',
-    ink: '#e9e5dc',
-    mark: '2',
-    imageUrl: 'image/Ziba Menu Mockup.png'
-  },
-  {
-    title: 'Bofal Business Hub',
-    type: 'Logo Identity',
-    color: '#e7ca24',
-    ink: '#151614',
-    mark: 'S',
-    imageUrl: 'image/Bofal Colored.png'
-  },
-  {
-    title: 'Hevm',
-    type: 'Brand identity',
-    color: '#7e63c9',
-    ink: '#ffffff',
-    mark: '4',
-    imageUrl: 'image/Hevm.jpg'
-  },
-  {
-    title: 'Paiflo Fintech',
-    type: 'Brand Identity',
-    color: '#e9e5dc',
-    ink: '#151614',
-    mark: 'V',
-    imageUrl: 'image/Manique tshirt.png'
-  },
-  {
-    title: 'Defiscan',
-    type: 'Art direction',
-    color: '#f05b36',
-    ink: '#151614',
-    mark: '6',
-    imageUrl: 'image/Defiscan.jpg'
-  }
+  { number: '05', title: 'Paiflo Brand Identity', type: 'Brand identity', description: 'A considered brand identity designed to make Paiflo feel clear, credible and approachable.', year: '2026', color: '#dae0f0', ink: '#283866', mark: 'P', category: 'brand', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/af4bb5252721867.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png', behanceUrl: 'https://www.behance.net/gallery/252721867/Paiflo-Brand-Identity' },
+  { number: '06', title: 'Bofal Business Hub', type: 'Logo identity', description: 'A clear logo identity created for a capable, business-focused brand with room to grow.', year: '2026', color: '#688e68', ink: '#f3f5e7', mark: 'B', category: 'brand', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/6e7065252708315.Y3JvcCwxMjg4LDEwMDgsMTIxLDA.png', behanceUrl: 'https://www.behance.net/gallery/252708315/Bofal-Business-Hub-Logo-Identity' },
+  { number: '07', title: 'Hevm Branding', type: 'Brand identity', description: 'A distinctive brand system with bold visual cues and a confident, flexible digital presence.', year: '2026', color: '#775ec7', ink: '#ffffff', mark: 'H', category: 'brand', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d0bc35229475243.Y3JvcCwyODEwLDIxOTgsMzQ3LDA.jpg', behanceUrl: 'https://www.behance.net/gallery/229475243/Hevm-Branding' },
+  { number: '08', title: 'Defiscan Brand Design', type: 'Brand identity', description: 'A focused visual identity created to make Defiscan stand out with clarity and energy.', year: '2026', color: '#e5b726', ink: '#211e14', mark: 'D', category: 'brand', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/541e79229474823.Y3JvcCwxMTIxLDg3NiwxMzgsMA.jpg', behanceUrl: 'https://www.behance.net/gallery/229474823/Defiscan-Brand-Design' },
+  { number: '09', title: 'Web3 Designs', type: 'Campaign / Digital design', description: 'A bold set of Web3 visuals designed to make complex ideas feel engaging across digital touchpoints.', year: '2026', color: '#4f6fc6', ink: '#ffffff', mark: 'W', category: 'campaign', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/4f04e0237302517.Y3JvcCw4MDgsNjMyLDAsMA.png', behanceUrl: 'https://www.behance.net/gallery/237302517/Web3-Designs' },
+  { number: '10', title: 'Social Media Design', type: 'Campaign / Social design', description: 'A versatile social media design system built for quick recognition, clear messaging and consistent content.', year: '2026', color: '#de5d64', ink: '#ffffff', mark: 'S', category: 'campaign', imageUrl: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/b94c99235236261.Y3JvcCw4MDgsNjMyLDAsMA.png', behanceUrl: 'https://www.behance.net/gallery/235236261/Social-Media-design' }
 ];
 
 document.documentElement.classList.add('js');
-
-const motionGrid = document.querySelector('#motion-grid');
+const workGrid = document.querySelector('#work-grid');
 const motionTemplate = document.querySelector('#motion-card-template');
-
-function getYouTubeThumbnail(url) {
-  if (!url) return '';
-
-  const match = url.match(
-    /(?:youtube\.com\/embed\/|youtu\.be\/|youtube\.com\/watch\?v=)([\w-]{11})/
-  );
-
-  return match
-    ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`
-    : '';
-}
-
 motionProjects.forEach((project) => {
   const card = motionTemplate.content.cloneNode(true);
-  const button = card.querySelector('.video-button');
-  const poster = card.querySelector('.video-poster');
-
-  const thumbnail = project.thumbnailUrl || getYouTubeThumbnail(project.embedUrl);
-
-  poster.style.setProperty('--card-color', project.color);
-
-  if (thumbnail) {
-    poster.style.backgroundImage = `url("${thumbnail}")`;
-    poster.classList.add('has-thumbnail');
+  const visual = card.querySelector('.video-visual');
+  const video = card.querySelector('video');
+  const startButton = card.querySelector('.video-start');
+  card.querySelector('.motion-project').dataset.category = project.category;
+  visual.style.setProperty('--project-color', project.color);
+  if (project.posterUrl) video.poster = project.posterUrl;
+  if (project.videoUrl) {
+    video.src = project.videoUrl;
+    if (!project.posterUrl) {
+      video.addEventListener('loadeddata', () => {
+        video.currentTime = Math.min(.1, Math.max(0, video.duration - .1));
+      }, { once: true });
+    }
+  } else {
+    visual.classList.add('video-not-ready');
+    video.hidden = true;
+    startButton.hidden = true;
   }
-
-  card.querySelector('.work-index').textContent = project.number;
+  card.querySelector('.project-number').textContent = project.number;
   card.querySelector('h3').textContent = project.title;
-card.querySelector('.work-type').textContent = project.type;
-card.querySelector('.work-description').textContent = project.description;
-  card.querySelector('.work-details span').textContent =
-    project.embedUrl ? 'Watch →' : 'Add link';
-
-  button.addEventListener('click', () => openVideo(project));
-  motionGrid.appendChild(card);
+  card.querySelector('p').textContent = project.type;
+  card.querySelector('.project-description').textContent = project.description;
+  card.querySelector('.project-year').textContent = project.year;
+  startButton.addEventListener('click', () => {
+    video.play();
+    startButton.hidden = true;
+  });
+  video.addEventListener('play', () => { startButton.hidden = true; });
+  video.addEventListener('pause', () => { if (!video.ended) startButton.hidden = false; });
+  workGrid.appendChild(card);
 });
 
-const brandGrid = document.querySelector('#brand-grid');
 const brandTemplate = document.querySelector('#brand-card-template');
-
 brandProjects.forEach((project) => {
   const card = brandTemplate.content.cloneNode(true);
-  const art = card.querySelector('.brand-art');
-
-  art.style.setProperty('--brand-color', project.color);
-  art.style.setProperty('--brand-ink', project.ink);
-  art.dataset.mark = project.mark;
-
+  const art = card.querySelector('.brand-visual');
+  const link = card.querySelector('.brand-project-link');
+  card.querySelector('.brand-project').dataset.category = project.category;
+  art.style.setProperty('--brand-color', project.color); art.style.setProperty('--brand-ink', project.ink); art.dataset.mark = project.mark;
   if (project.imageUrl) {
     art.style.backgroundImage = `url("${project.imageUrl}")`;
     art.classList.add('has-brand-image');
   }
-
+  link.href = project.behanceUrl;
   art.querySelector('span').textContent = project.type;
+  card.querySelector('.project-number').textContent = project.number;
   card.querySelector('h3').textContent = project.title;
-card.querySelector('p').textContent = project.type;
-
-  brandGrid.appendChild(card);
+  card.querySelector('p').textContent = project.type;
+  card.querySelector('.project-description').textContent = project.description;
+  card.querySelector('.project-year').textContent = project.year;
+  workGrid.appendChild(card);
 });
 
-// Duplicate frames so the wall loops smoothly.
-brandGrid.innerHTML += brandGrid.innerHTML;
-
-const modal = document.querySelector('#video-modal');
-const frame = modal.querySelector('.video-frame');
-
-function openVideo(project) {
-  if (!project.embedUrl) {
-    alert(`Add the embed link for "${project.title}" in script.js to play it here.`);
-    return;
-  }
-
-  frame.innerHTML = `
-    <iframe
-      src="${project.embedUrl}"
-      title="${project.title}"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  `;
-
-  modal.showModal();
-}
-
-function closeVideo() {
-  modal.close();
-  frame.innerHTML = '';
-}
-
-document.querySelector('.close-modal').addEventListener('click', closeVideo);
-
-modal.addEventListener('click', (event) => {
-  if (event.target === modal) closeVideo();
-});
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+document.querySelectorAll('.work-filters button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    let visibleProjects = 0;
+    document.querySelectorAll('.work-filters button').forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', active);
     });
-  },
-  { threshold: 0.08 }
-);
-
-document.querySelectorAll('.reveal').forEach((element) => {
-  observer.observe(element);
-});
-
-document.querySelector('.menu-toggle').addEventListener('click', (event) => {
-  const nav = document.querySelector('.site-nav');
-  const open = nav.classList.toggle('open');
-
-  event.currentTarget.setAttribute('aria-expanded', open);
-});
-
-document.querySelectorAll('.site-nav a').forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelector('.site-nav').classList.remove('open');
+    document.querySelectorAll('.portfolio-card').forEach((card) => {
+      const visible = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !visible;
+      if (visible) visibleProjects += 1;
+    });
+    document.querySelector('#filter-empty').hidden = visibleProjects !== 0;
   });
 });
 
+const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }), { threshold: .08 });
+document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+document.querySelector('.menu-toggle').addEventListener('click', (event) => { const nav = document.querySelector('.site-nav'); const open = nav.classList.toggle('open'); event.currentTarget.setAttribute('aria-expanded', open); });
+document.querySelectorAll('.site-nav a').forEach((link) => link.addEventListener('click', () => document.querySelector('.site-nav').classList.remove('open')));
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 document.querySelector('#project-form').addEventListener('submit', async (event) => {
   event.preventDefault();
-
   const form = event.currentTarget;
   const button = form.querySelector('.send-button');
-
-  // Paste your Formspree endpoint between the quotation marks below.
+  const originalLabel = button.innerHTML;
   const formspreeEndpoint = 'https://formspree.io/f/mykrzzja';
 
   button.disabled = true;
@@ -226,22 +115,18 @@ document.querySelector('#project-form').addEventListener('submit', async (event)
     const response = await fetch(formspreeEndpoint, {
       method: 'POST',
       body: new FormData(form),
-      headers: {
-        Accept: 'application/json'
-      }
+      headers: { Accept: 'application/json' }
     });
 
-    if (response.ok) {
-      form.reset();
-      button.textContent = 'Enquiry sent ✓';
-    } else {
-      button.textContent = 'Try again';
-      alert('Your enquiry could not be sent. Please try again.');
-    }
+    if (!response.ok) throw new Error('Form submission failed');
+    form.reset();
+    button.textContent = 'Enquiry sent ✓';
   } catch (error) {
     button.textContent = 'Try again';
-    alert('Connection error. Please try again.');
   }
 
-  button.disabled = false;
+  window.setTimeout(() => {
+    button.disabled = false;
+    button.innerHTML = originalLabel;
+  }, 3000);
 });
