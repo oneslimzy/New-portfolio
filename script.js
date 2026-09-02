@@ -3,9 +3,9 @@
 // This uses the browser's built-in video player, so visitors play the film on
 // your website without going to YouTube.
 const motionProjects = [
-  { number: '01', title: 'Zidi AI Assistant', type: 'Explainer video', description: 'A clear, engaging product story that makes the Zidi AI experience easy to understand.', year: '2026', color: '#5f78d4', category: 'motion', videoUrl: 'videos/zidi-ai-assistant.mp4', posterUrl: '' },
-  { number: '02', title: 'Axentra', type: 'Product promo video', description: 'A cinematic product promo that brings the Axentra trading platform to life through dynamic interface motion and focused visual pacing.', year: '2026', color: '#cc6de4', category: 'motion', videoUrl: 'videos/axentra.mp4', posterUrl: '' },
-  { number: '03', title: 'SAG USSD', type: 'Product walkthrough', description: 'A guided feature video showing users how to access and use the SAG USSD service with ease.', year: '2026', color: '#e4b93d', category: 'motion', videoUrl: 'videos/sag-ussd.mp4', posterUrl: '' }
+  { number: '01', title: 'Zidi AI Assistant', type: 'Explainer video', description: 'A clear, engaging product story that makes the Zidi AI experience easy to understand.', year: '2026', color: '#5f78d4', category: 'motion', videoUrl: 'videos/zidi-ai-assistant.mp4', posterUrl: 'images/zidi-ai-assistant-poster.jpg' },
+  { number: '02', title: 'Axentra', type: 'Product promo video', description: 'A cinematic product promo that brings the Axentra trading platform to life through dynamic interface motion and focused visual pacing.', year: '2026', color: '#cc6de4', category: 'motion', videoUrl: 'videos/axentra.mp4', posterUrl: 'images/axentra-poster.jpg' },
+  { number: '03', title: 'SAG USSD', type: 'Product walkthrough', description: 'A guided feature video showing users how to access and use the SAG USSD service with ease.', year: '2026', color: '#e4b93d', category: 'motion', videoUrl: 'videos/sag-ussd.mp4', posterUrl: 'images/sag-ussd-poster.jpg' }
 ];
 
 // Featured branding work. Each card uses its real Behance cover image and
