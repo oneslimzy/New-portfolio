@@ -16,14 +16,17 @@
 .project-meta .project-description{max-width:38rem;margin-top:.6rem;color:#c3c5c0;font-size:.82rem;line-height:1.5;text-transform:none}
 .slimzy-portrait{min-height:0;aspect-ratio:3/4;background:#e9e9e7 url("images/ayomide-portrait-frame.png") center top/cover no-repeat}
 .slimzy-portrait:before{display:none}
-.slimzy-portrait span{padding:.38rem .5rem;background:rgba(17,18,20,.76)}
+.slimzy-portrait span{left:auto;right:1rem;bottom:1rem;padding:.62rem .9rem;border:.5px solid rgba(201,255,67,.58);border-radius:999px;background:rgba(17,18,20,.9);color:var(--paper);box-shadow:0 4px 18px rgba(0,0,0,.28);font:700 .6rem var(--mono);letter-spacing:.07em}
+.slimzy-about-layout{scroll-margin-top:6.5rem}
 @media(max-width:700px){
   .site-header{height:58px;padding:6px 10px}
   .menu-toggle{display:none}
   .site-nav{position:static;display:flex!important;flex:1;min-width:0;height:100%;padding:0;border:0;border-radius:0;background:transparent;flex-direction:row;align-items:center;justify-content:flex-end;gap:0}
-  .site-nav a{padding:.5rem .38rem;color:var(--paper);font-size:.56rem;white-space:nowrap}
-  .site-nav a:last-child{background:#4d88f7;box-shadow:none}
+  .site-nav a{padding:.5rem .28rem;color:var(--paper);font-size:.55rem;white-space:nowrap}
+  .site-nav a:last-child{background:#4d88f7;box-shadow:0 0 16px rgba(77,136,247,.48)}
   .round-link{flex:0 0 64px;min-width:64px;width:64px;height:64px;aspect-ratio:1;line-height:1}
+  .slimzy-portrait{width:calc(100% + 11vw);margin-right:-5.5vw;margin-left:-5.5vw;aspect-ratio:9/10;background-position:center top}
+  .slimzy-portrait span{right:1rem;bottom:1rem}
 }
 
 .site-nav a{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.73rem;letter-spacing:-.01em}
