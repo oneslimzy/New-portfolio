@@ -7,7 +7,7 @@
 .header nav a{display:inline-flex;align-items:center;gap:5px}
 .benefit-icon{width:29px;height:29px;color:#d7d7d7;display:block;margin-bottom:40px;stroke-width:1.3}
 .card-arrow .arrow-icon{width:17px;height:17px}
-.play-icon{width:20px;height:20px;margin-left:2px}
+.play-icon{width:20px;height:20px;margin:0;transform:none}
 .card-meta>span,.case-study-link{display:flex;align-items:center;gap:5px}
 .email-link .arrow-icon{margin-left:20px}
 .social-links strong{display:flex;align-items:center;gap:6px}

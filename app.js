@@ -16,7 +16,7 @@ function card(project){
     return `<article class="project-card video-card">
       <div class="card-image inline-player">
         <video playsinline preload="none" poster="${escapeHTML(project.cover)}" aria-label="${escapeHTML(project.title)} video"><source src="${escapeHTML(project.video)}" type="video/mp4"></video>
-        <button class="inline-play" type="button" aria-label="Play ${escapeHTML(project.title)}"><span class="play-disc" aria-hidden="true">${icon('play','play-icon')}</span><span>PLAY FILM</span></button>
+        <button class="inline-play" type="button" aria-label="Play ${escapeHTML(project.title)}"><span class="play-disc" aria-hidden="true">${icon('play','play-icon')}</span><span>PLAY VIDEO</span></button>
       </div>
       <div class="card-meta"><div><h3>${escapeHTML(project.title)}</h3><p>${escapeHTML(project.type)}</p></div><a class="case-study-link" href="${projectLink(project)}" aria-label="View ${escapeHTML(project.title)} case study">VIEW CASE STUDY ${icon('arrow-up-right')}</a></div>
       <p class="playback-status" role="status" hidden></p>
@@ -109,9 +109,9 @@ if(caseRoot){
       <a class="back-link" href="index.html#work">${icon('arrow-left')} ALL SELECTED WORK</a>
       <div class="case-heading"><p class="eyebrow">${escapeHTML(project.category.toUpperCase())} / PROJECT NOTES</p><h1>${escapeHTML(project.title)}</h1><p class="case-intro">${escapeHTML(project.intro)}</p></div>
       <div class="case-meta"><div><span>DISCIPLINE</span>${escapeHTML(project.type)}</div><div><span>DESIGNER</span>Slimzy Concept</div>${project.duration ? `<div><span>RUN TIME</span>${escapeHTML(project.duration)}</div>` : ''}</div>
-      <div class="case-media">${project.video ? `<video controls playsinline preload="metadata" poster="${escapeHTML(project.cover)}"><source src="${escapeHTML(project.video)}" type="video/mp4">Your browser cannot play this video. <a href="${escapeHTML(project.video)}">Open the film</a>.</video>` : `<img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} identity project" width="808" height="632">`}</div>
+      <div class="case-media">${project.video ? `<video controls playsinline preload="metadata" poster="${escapeHTML(project.cover)}"><source src="${escapeHTML(project.video)}" type="video/mp4">Your browser cannot play this video. <a href="${escapeHTML(project.video)}">Open the video</a>.</video>` : `<img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} identity project" width="808" height="632">`}</div>
       <div class="case-notes">${sections}</div>
       <div class="case-actions">${project.behance ? `<a class="button primary" href="${escapeHTML(project.behance)}" target="_blank" rel="noopener noreferrer">FULL PROJECT ON BEHANCE ${icon('arrow-up-right')}</a>` : ''}<a class="button" href="index.html#contact">HAVE A SIMILAR PROJECT? ${icon('arrow-up-right')}</a></div>
-      <a class="next-project" href="${projectLink(next)}"><div><span>NEXT FILM</span><strong>${escapeHTML(next.title)}</strong></div>${icon('arrow-up-right','next-icon')}</a>`;
+      <a class="next-project" href="${projectLink(next)}"><div><span>NEXT VIDEO</span><strong>${escapeHTML(next.title)}</strong></div>${icon('arrow-up-right','next-icon')}</a>`;
   }
 }
