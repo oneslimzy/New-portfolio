@@ -22,9 +22,9 @@ function card(project){
       <p class="playback-status" role="status" hidden></p>
     </article>`;
   }
-  return `<a class="project-card" href="${escapeHTML(project.behance)}" target="_blank" rel="noopener noreferrer" aria-label="View ${escapeHTML(project.title)} on Behance">
+  return `<a class="project-card ${escapeHTML(project.category)}-card" href="${projectLink(project)}" aria-label="View ${escapeHTML(project.title)} case study">
     <div class="card-image"><img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} — ${escapeHTML(project.type)}" loading="lazy" width="808" height="505"><span class="card-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></div>
-    <div class="card-meta"><div><h3>${escapeHTML(project.title)}</h3><p>${escapeHTML(project.type)}</p></div><span>VIEW ON BEHANCE ${icon('arrow-up-right')}</span></div>
+    <div class="card-meta"><div><h3>${escapeHTML(project.title)}</h3><p>${escapeHTML(project.type)}</p></div><span>VIEW CASE STUDY ${icon('arrow-up-right')}</span></div>
   </a>`;
 }
 
@@ -101,17 +101,29 @@ if(caseRoot){
     caseRoot.innerHTML = `<h1>Project not found.</h1><p>Explore the portfolio to find a project.</p><a class="button" href="index.html#work">BACK TO SELECTED WORK ${icon('arrow-up-right')}</a>`;
   } else {
     document.title = `${project.title} — Slimzy Concept`;
-    const videoProjects = projects.filter(item => item.video);
-    const currentVideoIndex = videoProjects.findIndex(item => item.id === project.id);
-    const next = currentVideoIndex >= 0 ? videoProjects[(currentVideoIndex + 1) % videoProjects.length] : projects[(projects.indexOf(project) + 1) % projects.length];
-    const sections = (project.sections || []).map(section => `<section class="case-text"><h2>${escapeHTML(section.title)}</h2><p>${escapeHTML(section.copy)}</p></section>`).join('');
+    const currentIndex = projects.findIndex(item => item.id === project.id);
+    const next = projects[(currentIndex + 1) % projects.length];
+    const caseNotes = [
+      {title:'Brief', copy:project.brief},
+      {title:'Overview', copy:project.overview},
+      {title:'Outcome', copy:project.outcome}
+    ];
+    const notes = caseNotes.map((note,index) => `<article class="case-note"><span class="case-index">0${index + 1}</span><div><h2>${escapeHTML(note.title)}</h2><p>${escapeHTML(note.copy || '')}</p></div></article>`).join('');
+    const gallery = project.gallery?.length ? `<section class="project-gallery" aria-labelledby="gallery-title">
+      <div class="gallery-heading"><div><p class="eyebrow">PROJECT GALLERY</p><h2 id="gallery-title">Selected visuals</h2></div><span>${String(project.gallery.length).padStart(2,'0')} IMAGES</span></div>
+      <div class="gallery-grid">${project.gallery.map((item, index) => `<figure class="gallery-item"><div class="case-visual"><img src="${escapeHTML(item.src)}" alt="${escapeHTML(item.alt)}" loading="lazy"></div><figcaption><span>${String(index + 1).padStart(2,'0')}</span>${escapeHTML(item.caption)}</figcaption></figure>`).join('')}</div>
+    </section>` : '';
+    const nextMedia = `<img src="${escapeHTML(next.cover)}" alt="" loading="lazy">`;
     caseRoot.innerHTML = `
       <a class="back-link" href="index.html#work">${icon('arrow-left')} ALL SELECTED WORK</a>
-      <div class="case-heading"><p class="eyebrow">${escapeHTML(project.category.toUpperCase())} / PROJECT NOTES</p><h1>${escapeHTML(project.title)}</h1><p class="case-intro">${escapeHTML(project.intro)}</p></div>
-      <div class="case-meta"><div><span>DISCIPLINE</span>${escapeHTML(project.type)}</div><div><span>DESIGNER</span>Slimzy Concept</div>${project.duration ? `<div><span>RUN TIME</span>${escapeHTML(project.duration)}</div>` : ''}</div>
-      <div class="case-media">${project.video ? `<video controls playsinline preload="metadata" poster="${escapeHTML(project.cover)}"><source src="${escapeHTML(project.video)}" type="video/mp4">Your browser cannot play this video. <a href="${escapeHTML(project.video)}">Open the video</a>.</video>` : `<img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} identity project" width="808" height="632">`}</div>
-      <div class="case-notes">${sections}</div>
-      <div class="case-actions">${project.behance ? `<a class="button primary" href="${escapeHTML(project.behance)}" target="_blank" rel="noopener noreferrer">FULL PROJECT ON BEHANCE ${icon('arrow-up-right')}</a>` : ''}<a class="button" href="index.html#contact">HAVE A SIMILAR PROJECT? ${icon('arrow-up-right')}</a></div>
-      <a class="next-project" href="${projectLink(next)}"><div><span>NEXT VIDEO</span><strong>${escapeHTML(next.title)}</strong></div>${icon('arrow-up-right','next-icon')}</a>`;
+      <div class="case-heading"><p class="eyebrow">${escapeHTML(project.category === 'campaigns' ? 'CAMPAIGNS & FLYERS' : project.category.toUpperCase())} / PROJECT</p><h1>${escapeHTML(project.title)}</h1>
+        <dl class="case-meta"><div><dt>PROJECT TYPE</dt><dd>${escapeHTML(project.type)}</dd></div><div><dt>MY ROLE</dt><dd>${escapeHTML(project.role)}</dd></div>${project.duration ? `<div><dt>RUNTIME</dt><dd>${escapeHTML(project.duration)}</dd></div>` : ''}</dl>
+        <p class="case-intro">${escapeHTML(project.intro)}</p>
+      </div>
+      <div class="case-media case-visual">${project.video ? `<video controls playsinline preload="metadata" poster="${escapeHTML(project.cover)}"><source src="${escapeHTML(project.video)}" type="video/mp4">Your browser cannot play this video. <a href="${escapeHTML(project.video)}">Open the video</a>.</video>` : `<img src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.title)} identity project">`}</div>
+      <section class="case-study" aria-label="About the project">${notes}</section>
+      ${gallery}
+      <div class="case-actions">${project.behance ? `<a class="button primary" href="${escapeHTML(project.behance)}" target="_blank" rel="noopener noreferrer">${project.category === 'campaigns' ? 'SEE FULL PROJECT ON BEHANCE' : 'FULL PROJECT ON BEHANCE'} ${icon('arrow-up-right')}</a>` : ''}<a class="button" href="index.html#contact">HAVE A SIMILAR PROJECT? ${icon('arrow-up-right')}</a></div>
+      <a class="next-project" href="${projectLink(next)}" aria-label="View next project: ${escapeHTML(next.title)}"><div class="next-copy"><span>NEXT PROJECT / ${escapeHTML(next.category.toUpperCase())}</span><strong>${escapeHTML(next.title)}</strong><small>${escapeHTML(next.type)}</small></div><div class="next-thumb case-visual">${nextMedia}<span>${icon('arrow-up-right','next-icon')}</span></div></a>`;
   }
 }

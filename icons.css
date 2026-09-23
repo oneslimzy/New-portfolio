@@ -3,7 +3,7 @@
 .ui-icon{width:1em;height:1em;display:inline-block;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .ui-icon .fill-shape{fill:currentColor;stroke:none}
 .arrow-icon{width:13px;height:13px;vertical-align:-2px}
-.logo-mark{width:27px;height:27px;stroke-width:1.35}
+.logo-mark{width:27px;height:27px;object-fit:contain;flex:0 0 auto}
 .header nav a{display:inline-flex;align-items:center;gap:5px}
 .benefit-icon{width:29px;height:29px;color:#d7d7d7;display:block;margin-bottom:40px;stroke-width:1.3}
 .card-arrow .arrow-icon{width:17px;height:17px}
